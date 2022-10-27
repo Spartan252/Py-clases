@@ -345,3 +345,11 @@ while level != -1:
     level -= 1
 print(listanivel[0][0])
 """
+#Manipulación de archivos
+#27/10/2022
+"""
+archivo = open("text.txt", "w")
+archivo.write("Hola mundo")
+archivo.write("Hola mundo")
+archivo.write("Hola mundo")
+"""
