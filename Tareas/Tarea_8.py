@@ -1,10 +1,43 @@
 
 
 #A
+"""
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
+listablero = []
+listares=[]
+mensaje = input()
+clave = input()
 
+def Criptograma():
+    cadena = alfabeto
+    for i in range(26):
+        listablero.append(cadena)
+        cadena = cadena[1:]+cadena[0]
+    return 0
 
+Criptograma()
 
+clvext= ""
+if len(mensaje)%len(clave)==0:
+    clavext = claveint(len(mensaje)/len(clave))
+else:
+    clavext = claveint(len(mensaje)/len(clave))
+    clavext += clave[:len(mensaje)%len(clave)]
 
+def Resultados():
+    for i in range(len(mensaje)):
+        columna = listablero[0].find(mensaje[i])
+        for a in range(26):
+            if clavext[i] == listablero[a][0]:
+                fila = a
+        listares.append([fila,columna])
+    return 0
+
+Resultados()
+
+for i in range(len(listares)):
+    print(listablero[listares[i][0]][listares[i][1]],end="")
+"""
 
 #_________________________________________________________________________________________
 #B
@@ -194,4 +227,4 @@ grad_pol = int(input())
 
 print(grad_pol // 2 + 1)
 """
-    
+
