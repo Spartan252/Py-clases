@@ -79,7 +79,7 @@ for i in range(n_cas):
 print(lis)
 """
 
-#D BIEN
+#D - BIEN
 
 """
 ent = int(input())
@@ -140,7 +140,7 @@ for x in range(n_casos):
     print(str(a) + " " + str(e) + " " + str(i) + " " + str(o) + " " + str(u))
 """
 
-#F BIEN
+#F - BIEN
 """
 n_casos = int(input())
 for x in range(n_casos):
@@ -213,7 +213,7 @@ while True:
 """
 
 
-#H BIEN
+#H - BIEN
 """
 entrada = int(input())
 cadenas = []
