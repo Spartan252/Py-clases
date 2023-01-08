@@ -1,7 +1,54 @@
 
-#A
+#A - BIEN
+"""
+x1 = int(input()) 
+y1 = int(input()) 
 
+x2 = int(input()) 
+y2 = int(input()) 
 
+x3 = int(input()) 
+y3 = int(input()) 
+
+x4 = int(input()) 
+y4 = int(input()) 
+
+list_x = [] 
+list_y = [] 
+
+for a in range(x4+1): 
+    list_x.append(0) 
+
+for b in range(y4+1): 
+    list_y.append(0) 
+
+for c in range(len(list_x)): 
+    if c >= x3: 
+        list_x[c] += 1 
+
+    if c >= x2: 
+        list_x[c] += 1 
+
+for d in range(len(list_y)): 
+    if d >= y3: 
+        list_y[d] += 1 
+
+    if d >= y2: 
+        list_y[d] += 1 
+
+fx = list_x.count(2) 
+fy = list_y.count(2) 
+
+if x3 >= x2 and y2 >= y3: 
+    fx += 2 
+    fy += 2 
+
+if fx != 0 or fy != 0: 
+    print(True) 
+
+else: 
+    print(False)
+"""
 
 #B - BIEN
 """
@@ -17,115 +64,49 @@ while not num == 0:
 """
 
 
-#C
+#C - BIEN
 """
-n_datos = int(input())
+n_datos = int(input()) 
+num = input() 
 
-for x in range(n_datos):
-    i = 0
-    j = 0
-    descendente = 0
-    sec = []
-    sec_datos = input()
-    sec = sec_datos.split(" ")
-    sec_ord = sorted(sec)
-    longitud = len(sec)
+lis_num = num.split(" ") 
+lis_num = [int(x) for x in lis_num] 
 
-    for y in range(longitud - 1):
-        if sec[y] > sec[y+1]:
-            descendente += 1
+ord_num = list(lis_num) 
+ord_num.sort() 
 
-    for z in range(longitud):
-        if(sec[z] != sec_ord[z]):
-            i = z+1
+a = 0 
+lis = []
 
-    for a in range (i +1, longitud):
-        if(sec[z] != sec_ord[z]):
-            j = z+1
-            print()
+for i in range(n_datos): 
 
-    if(sec == sec_ord):
-        print("Ordeneda")
-    elif(sec != sec_ord and descendente <= 2):
-        print("Casi ordenada: intercambiar", i, "y", j)
-    elif(sec != sec_ord and descendente >= 2):
-        print("Desordenada")
-    print(sec)
-    print(sec_ord)
-"""
-"""
-i = 0
-j = 0
-descendente = 0
-sec = []
+    if lis_num[i] != ord_num[i]: 
+        a += 1 
+        lis.append(i+1) 
 
-n_datos = int(input())
+if lis_num == ord_num: 
+    print("Ordenada") 
 
-sec_datos = input()
-sec = sec_datos.split(" ")
-sec_ord = sorted(sec)
+elif a > 2: 
+    print("Desordenada") 
 
-for x in range(n_datos):
-    if sec[x] != sec_ord[x]:
-        descendente += 1
-        print("descendente")
-
-
-for z in range(n_datos):
-    if(sec[z] != sec_ord[z]):
-        i = z+1
-        break
-
-for a in range (i-1, n_datos):
-    if(sec[a] != sec_ord[a]):
-        j = z+1
-        break
-
-if(sec == sec_ord):
-    print("Ordenada")
-elif(sec != sec_ord and descendente <= 2):
-    print("Casi ordenada: intercambiar", i, "y", j)
-elif(sec != sec_ord and descendente >= 2):
-    print("Desordenada")
-
-print(sec)
-print(sec_ord)
+else: 
+    print("Casi ordenada: intercambiar "+str(lis[0])+" y "+str(lis[1]))
 """
 
 #D
-
 """
-n_entradas = int(input())
-carros = input()
+from collections import Counter 
 
-lis_car = carros.split(" ")
-lis_car.sort()
+n_entradas = input()
 
-print(lis_car)
+modelos = input()
 
-for x in range(n_entradas):
-    z = lis_car.count(x)
-    print(lis_car)
+carros = modelos.split(" ") 
 
-    for y in range(z):
-        lis_car.remove(lis_car[x])
-        y += 1
-    print(lis_car.count(lis_car[x]))
-    x += 1
+car_comun = (Counter(carros).most_common()[-0][-0]) 
+print(car_comun)
 """
-
-n_entradas = int(input())
-carros = input()
-
-lis_car = carros.split(" ")
-lis_car.sort()
-
-for x in range(n_entradas):
-    z = lis_car.count(x)
-
-    if lis_car.count(lis_car[x]) >= 2:
-        print(lis_car[x])
-        break
 
 #E
 

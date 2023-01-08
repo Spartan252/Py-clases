@@ -65,11 +65,12 @@ while n_calif != 0:
 import time
 
 x = 4
-while x >0:
+while x > 0:
     time.sleep(1)
     x -= 1
     print(x)
-t = 0
+if x == 0:
+    print("hola")
 """
 """
 while True:
