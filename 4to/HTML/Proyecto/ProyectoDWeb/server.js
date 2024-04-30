@@ -13,5 +13,5 @@ app.use('/views', express.static('views'));
 
 
 app.listen(port, () => {
-    console.log("Aplicación de ejemplo corriendo en puerto " + port);
+    console.log("Aplicación corriendo en puerto " + port);
 });
